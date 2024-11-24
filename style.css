@@ -1,4 +1,5 @@
 /* General reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -392,15 +393,23 @@ nav ul li a:hover::after {
   text-align: center;
   transition: transform 0.3s ease;
   width: 120px; /* Width of each item */
+  perspective: 1000px; /* Add 3D perspective */
 }
 
 .icon i {
   font-size: 80px; /* Icon size */
   margin-bottom: 10px;
+  transition: transform 0.5s ease-in-out;
 }
 
 .icon:hover {
   transform: scale(1.1); /* Slight zoom on hover */
+}
+.icon:hover i {
+  transform: rotateY(20deg); /* Rotate 3D on hover */
+}
+.icon:hover i {
+  transform: rotateY(20deg); /* Rotate 3D on hover */
 }
 
 /* Icon Colors for Each Tech */
