@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/70d315832b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!----------------- Header ------------------>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/mylogo.png" class="logo" alt="My Logo">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#services">Interest</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p class="title-animation">
+                <span class="title" data-title="Software Engineer.">Software Engineer.</span>
+                <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast</span>
+                <span class="title" data-title="UI/UX Designer.">UI/UX Designer</span>
+            </p>
+            <h1>Hi, I am <span>Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
+        </div>
+    </div>
+</div>
+
+
+ <!------------about----------->   
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me.jpg " >
+            </div>
+                  <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                       <p>Hi there! I'm a software engineer with a passion for solving complex problems and creating innovative solutions. I have experience working on projects from small web applications and I am always eager to learn new technologies.
+
+                        I thrive in fast-paced environments and enjoy working on projects that push me to learn and grow.
+                     </p>
+
+                     <div class="tab-titles">
+                        
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                            <li><span>Web development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br>•Cybersecurity training at Moringa School</li>
+                            <li><span>2022</span><br>•	Developed clean, effective code utilizing languages like Java and JavaScript while adhering to coding standards and best practices</li>
+                            <li><span>2023</span><br>•Experience in using the archgis software for mapping  at NCWSC</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - Present:</span><br>Multimedia University of Kenya
+                            Bachelor of Science in Software Engineering</li>
+                            <li><span>2017-2021</span><br>Pangani Girls’ Secondary School
+                                Kenya Certificate Of Secondary Education
+                                Overall Grade - 78 ( A-)
+                   
+                   </li>
+                            <li><span>2014-2016</span><br> Little Friends Primary School
+                                Kenya Certificate Of Primary Education
+                                Overall marks (415/500)
+                   </li>
+                        </ul>
+                     </div>
+                     
+                </div>
+            
+        </div>
+    </div>
+</div> 
+<!----------------- Tech Stack ------------------>
+<div id="tech-stack">
+    <div class="container">
+        <h1 class="sub-title">Tech Stack</h1>
+        <div class="tech-icons">
+            <div class="icon tech-html5">
+                <i class="fab fa-html5"></i>
+                <p>HTML5</p>
+            </div>
+            <div class="icon tech-css3">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+            <div class="icon tech-js">
+                <i class="fab fa-js-square"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="icon tech-react">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="icon tech-python">
+                <i class="fab fa-python"></i>
+                <p>Python</p>
+            </div>
+            <div class="icon tech-nodejs">
+                <i class="fab fa-node"></i>
+                <p>Node.js</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------services-------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Interests</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-sharp fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Crafting visually stunning and responsive websites that prioritize user experience. From clean code to aesthetic design, I aim to create impactful digital solutions that tell a story.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-crop"></i>
+
+                <h2>UI/UX design</h2>
+                <p>Designing intuitive and user-friendly interfaces that bridge functionality and creativity. My goal is to enhance the user journey through thoughtful, data-driven design.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-expand"></i>
+                <h2>AI/ML</h2>
+                <p>Exploring the frontiers of artificial intelligence and machine learning to build intelligent systems that simplify complex tasks and empower decision-making through data.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------portfolio--------------------->
+<div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <div class="work-title">To-do list App</div>
+          <img src="images/todo.jpg" />
+          <div class="layer">
+            <h3>To-do list App</h3>
+            <p>
+              A simple application to add, delete, and manage tasks. It includes a
+              back-end that saves tasks and supports RESTful APIs for task
+              management.
+            </p>
+            <a
+              href="https://github.com/monicahwamuhu2/todo-list-app"
+              target="_blank"
+            >
+              <i class="fa-sharp fa-solid fa-link"></i>
+            </a>
+          </div>
+        </div>
+        <div class="work">
+          <div class="work-title">Image Classifier</div>
+          <img src="images/classifier.jpg" />
+          <div class="layer">
+            <h3>Image Classifier</h3>
+            <p>
+              This project is a web-based image classification application built
+              using Flask, TensorFlow, and a pre-trained model on the CIFAR
+              dataset. Users can upload images to the web app, and it predicts the
+              class of the uploaded image.
+            </p>
+            <a
+              href="https://github.com/monicahwamuhu2/image-classifier.git"
+              target="_blank"
+            >
+              <i class="fa-sharp fa-solid fa-link"></i>
+            </a>
+          </div>
+        </div>
+        <div class="work">
+          <div class="work-title">Weather App</div>
+          <img src="images/weather.jpg" />
+          <div class="layer">
+            <h3>Weather App</h3>
+            <p>
+              A simple and visually appealing weather application that allows
+              users to search for current weather conditions in any city using
+              the OpenWeatherMap API. The app provides temperature, weather
+              description, and an icon representing the weather condition.
+            </p>
+            <a
+              href="https://monicahwamuhu2.github.io/Weather-app/"
+              target="_blank"
+            >
+              <i class="fa-sharp fa-solid fa-link"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="button">See More</a>
+    </div>
+  </div>
+  
+
+<!-------------------------contact-------------->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-regular fa-paper-plane"></i>monicahwamuhu2@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+254-717192945</p>
+                <div class="social-icons">
+                   <a href="https://www.instagram.com/_.wamuhuuu/"><i class="fa-brands fa-square-instagram"></i></a>
+                   <a href="https://twitter.com/home"><i class=" fab fa-twitter-square"></i></a>
+                   <a href="https://www.linkedin.com/in/monicah-wamuhu/"><i class="fab fa-linkedin"></i></a>
+                   <a href="https://secure.skype.com/portal/profile"><i class="fab fa-skype"></i></a>
+
+                </div>
+
+                <a href="images/Monicah Wamuhu CV.pdf" download class="button btn2">Download Resume</a>
+
+            </div>
+            <div class="contact-right">
+                <form action="https://formspree.io/f/mwpkqdnl"
+                method="POST">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Messsage" ></textarea>
+                    <button type="submit"class="button btn2">Submit</button>
+
+                    
+                </form>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="copyright">
+        <p> copyright © Monicah's Portfolio website <i class="fas fa-heart"></i></p> 
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const icons = document.querySelectorAll(".icon");
+    let index = 0;
+
+    setInterval(() => {
+        icons.forEach((icon, i) => {
+            icon.style.opacity = i === index ? "1" : "0.2"; // Highlight active icon
+        });
+        index = (index + 1) % icons.length; // Loop through icons
+    }, 2000); // 2-second interval
+});
+
+const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+
+</script>
+
+</body>
+</html>
