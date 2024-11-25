@@ -90,5 +90,4 @@ This project is open-source for educational and demonstration purposes. Feel fre
 
 ---
 
-Let me know if you'd like any adjustments! 😊
 
