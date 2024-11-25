@@ -7,6 +7,8 @@
     <title>Personal portfolio website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/70d315832b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
+
 </head>
 <body>
 
@@ -27,8 +29,18 @@
                 <li><a href="#portfolio">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
+           
+              
         </nav>
         <div class="header-text">
+            <div class="theme-toggle-container">
+                <span>Switch Theme</span>
+                <label class="theme-switch">
+                  <input type="checkbox" id="theme-toggle" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              
             <p class="title-animation">
                 <span class="title" data-title="Software Engineer.">Software Engineer.</span>
                 <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
@@ -64,9 +76,9 @@
                      </div>
                      <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing web/app interfaces</li>
-                            <li><span>Web development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                            <li><span>•UI/UX</span><br>Designing web/app interfaces</li>
+                            <li><span>•Web development</span><br>Web app Development</li>
+                            <li><span>•App Development</span><br>Building Android/iOS apps</li>
                         </ul>
                      </div>
                      <div class="tab-contents" id="experience">
@@ -78,14 +90,14 @@
                      </div>
                      <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2021 - Present:</span><br>Multimedia University of Kenya
+                            <li><span>•2021 - Present:</span><br>Multimedia University of Kenya
                             Bachelor of Science in Software Engineering</li>
-                            <li><span>2017-2021</span><br>Pangani Girls’ Secondary School
+                            <li><span>•2017-2021</span><br>Pangani Girls’ Secondary School
                                 Kenya Certificate Of Secondary Education
                                 Overall Grade - 78 ( A-)
                    
                    </li>
-                            <li><span>2014-2016</span><br> Little Friends Primary School
+                            <li><span>•2014-2016</span><br> Little Friends Primary School
                                 Kenya Certificate Of Primary Education
                                 Overall marks (415/500)
                    </li>
@@ -258,11 +270,37 @@
             
         </div>
     </div>
+
+    <div class="rate-container">
+        <span class="rate-text">Rate My Portfolio: </span>
+        <div class="star-rating">
+            <label for="star1" class="star" data-tooltip="1 Star">&#9733;</label>
+            <label for="star2" class="star" data-tooltip="2 Stars">&#9733;</label>
+            <label for="star3" class="star" data-tooltip="3 Stars">&#9733;</label>
+            <label for="star4" class="star" data-tooltip="4 Stars">&#9733;</label>
+            <label for="star5" class="star" data-tooltip="5 Stars">&#9733;</label>
+            
+        </div>
+        <div class="rating-feedback">
+          <p id="rating-result">No rating yet.</p>
+        </div>
+
+      
+          
+      </div>
+
+     
+
+    
     <div class="copyright">
         <p> copyright © Monicah's Portfolio website <i class="fas fa-heart"></i></p> 
     </div>
 </div>
 
+
+
+
+  
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -295,6 +333,55 @@ const navList = document.querySelector('.nav-list');
 mobileMenu.addEventListener('click', () => {
     navList.classList.toggle('active');
 });
+
+// Select the theme toggle input
+const themeToggle = document.getElementById('theme-toggle');
+
+// Check the user's saved theme in localStorage or default to light
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+// Set the toggle switch state based on the saved theme
+themeToggle.checked = savedTheme === 'dark';
+
+// Listen for toggle switch changes
+themeToggle.addEventListener('change', () => {
+    const newTheme = themeToggle.checked ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+
+
+// JavaScript to handle rating selection and display result
+document.querySelectorAll('.star-rating input').forEach(input => {
+  input.addEventListener('change', function () {
+    let rating = this.value;
+
+    // Display the rating result with smooth animation
+    let ratingText = `You rated this portfolio: ${rating} star${rating > 1 ? 's' : ''}.`;
+    let feedbackElement = document.getElementById('rating-result');
+
+    feedbackElement.textContent = ratingText;
+    feedbackElement.classList.add('visible');  // Apply animation class
+
+    // Optionally, store the rating in localStorage
+    localStorage.setItem('portfolioRating', rating);
+  });
+});
+
+// On page load, retrieve saved rating from localStorage (if available)
+window.onload = function () {
+  let savedRating = localStorage.getItem('portfolioRating');
+  if (savedRating) {
+    let feedbackElement = document.getElementById('rating-result');
+    feedbackElement.textContent = `You previously rated this portfolio: ${savedRating} star${savedRating > 1 ? 's' : ''}.`;
+    feedbackElement.classList.add('visible');  // Apply animation class
+    // Set the radio button corresponding to the saved rating
+    document.querySelector(`#star${savedRating}`).checked = true;
+  }
+};
+
+
 
 
 </script>

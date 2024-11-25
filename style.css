@@ -12,6 +12,90 @@ body {
   color: #f2f5f8;
 }
 
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #6200ea;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle-container {
+  display: flex;
+  align-items: center;  /* Align text and toggle horizontally */
+  justify-content: center; /* Ensure content is centered horizontally */
+  padding: 10px 15px;
+  background-color: #ea2020b0; /* Dark background color to ensure visibility */
+  color: var(--text-color);  /* Adjust text color according to the theme */
+  border-radius: 5px;
+ 
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(235, 63, 63, 0.2); /* Optional shadow for depth */
+  transition: background-color 0.3s, color 0.3s;
+  width: 200px; /* Adjust width as needed */
+  margin: 0 auto; /* This will center it horizontally */
+  text-align: center; /* Center text inside the box */
+}
+
+.theme-toggle-container span {
+  margin-right: 10px;  /* Space between text and toggle button */
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.theme-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.theme-switch input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+.theme-switch .slider:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.theme-switch input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+
 /* Header styling */
 #header {
   width: 100%;
@@ -146,7 +230,7 @@ nav ul li a:hover::after {
 
 .title {
   position: absolute;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Libre Baskerville', serif; /* Update font */
   font-size: 32px;
   color: #ed15b7;
   opacity: 0;
@@ -205,8 +289,9 @@ nav ul li a:hover::after {
 /* About section */
 #about {
   padding: 80px 0;
-  background: #1e1e1e;
+  background:#6200ea;
   color: #f2f5f8;
+  font-family: 'Libre Baskerville', serif;
 }
 
 #about::after {
@@ -247,8 +332,8 @@ nav ul li a:hover::after {
 
 .sub-title {
   font-size: 60px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
+  font-family: 'Libre Baskerville', serif; /* Update font */
+  font-weight: 1000; /* Bold for emphasis */
   color: antiquewhite;
 }
 
@@ -259,6 +344,7 @@ nav ul li a:hover::after {
 
 .tab-links {
   margin-right: 50px;
+  font-family: 'Libre Baskerville', serif; /* Update font */
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -277,17 +363,19 @@ nav ul li a:hover::after {
 }
 
 .tab-links.active-link::after {
-  width: 50%;
+  width: 90%;
 }
 
 .tab-contents ul li {
   list-style: none;
   margin: 10px;
+  font-family: 'Libre Baskerville', serif; /* Update font */
 }
 
 .tab-contents ul li span {
   color: #b55769;
-  font-size: 14px;
+  font-size: 20px;
+  font-family: 'Libre Baskerville', serif; /* Update font */
 }
 
 .tab-contents {
@@ -622,7 +710,7 @@ nav ul li a:hover::after {
   
   padding: 80px 20px;
   background: linear-gradient(to bottom, rgba(0,0,0, 0.6), rgba(213, 29, 29, 0.6));
-  color: #f2f5f8;
+  color: #ba3232;
   
   
 }
@@ -652,7 +740,7 @@ nav ul li a:hover::after {
   text-decoration: none;
   font-size: 30px;
   margin-right: 15px;
-  color: #f2f5f8;
+  color: hsl(317, 85%, 54%);
   display: inline-block;
   transition: transform 0.5s;
 }
@@ -668,7 +756,7 @@ nav ul li a:hover::after {
 } 
 .contact-right form{
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(224, 7, 141, 0.1);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -681,7 +769,7 @@ form input, form textarea{
   background: #1e1e1e;
   padding: 15px;
   margin: 15px 0;
-  color: #fff;
+  color: #cd88a8;
   font-size: 16px;
   border-radius: 6px;
   transition: border-color 0.3s;
@@ -735,3 +823,114 @@ nav .fas{
 }
 }
 
+/* General styles */
+.rate-container {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-color);
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff004f, #1daacd); /* Gradient for a modern look */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  width: 80%;
+  max-width: 400px;
+  margin: 40px auto; /* Centering the container */
+}
+
+.rate-text {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.star-rating {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.star {
+  font-size: 50px; /* Larger stars for better visibility */
+  color: #bbb;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.star:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1daacd;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.star:hover,
+.star:active {
+  color: #ffcc00; /* Golden color on hover */
+  transform: scale(1.2); /* Scale effect for better interaction */
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked ~ label {
+  color: #ffcc00; /* Highlight checked stars in golden color */
+}
+
+.rating-feedback {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.rating-feedback p {
+  transition: opacity 0.5s ease;
+  font-size: 22px;
+  opacity: 0; /* Start hidden */
+}
+
+.rating-feedback p.visible {
+  opacity: 1; /* Fade-in effect for the feedback text */
+  animation: fadeIn 1s ease-in; /* Fade-in animation */
+}
+
+/* Fade-in animation for the feedback text */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .star-rating {
+    font-size: 40px; /* Slightly smaller stars for small screens */
+  }
+
+  .rate-container {
+    padding: 15px;
+    width: 90%; /* Make container more responsive */
+  }
+
+  .rate-text {
+    font-size: 20px; /* Smaller text for mobile */
+  }
+}
