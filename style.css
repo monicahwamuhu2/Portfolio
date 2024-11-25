@@ -934,3 +934,37 @@ input[type="radio"]:checked ~ label {
     font-size: 20px; /* Smaller text for mobile */
   }
 }
+
+.rating-display {
+  background-color: #1daacd;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.rating-display h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.avg-rating-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.total-ratings-text {
+  font-size: 16px;
+}
+
+#avg-rating {
+  font-size: 26px;
+  color: #ffcc00; /* Yellow color for the stars */
+}
+
+#total-ratings {
+  font-size: 20px;
+}
