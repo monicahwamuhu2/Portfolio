@@ -6,111 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/70d315832b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+
 
 </head>
 <body>
 
 <!----------------- Header ------------------>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/mylogo.png" class="logo" alt="My Logo">
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#services">Interest</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#Contact">Contact</a></li>
-            </ul>
-           
-              
-        </nav>
-        <div class="header-text">
-            <div class="theme-toggle-container">
-                <span>Switch Theme</span>
-                <label class="theme-switch">
-                  <input type="checkbox" id="theme-toggle" />
-                  <span class="slider"></span>
-                </label>
-              </div>
-              
-            <p class="title-animation">
-                <span class="title" data-title="Software Engineer.">Software Engineer.</span>
-                <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
-                <span class="title" data-title="UI/UX Designer.">UI/UX Designer.</span>
-            </p>
-            <h1>Hi, I am <span>Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
-        </div>
-        
+<div class="container">
+  <header>
+      <div class="nav-left">
+          <img src="images/mylogo.png" class="logo" alt="My Logo">
+      </div>
+      <div class="nav-right">
+          <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <!-- Main Navigation Bar -->
+          <nav id="floating-navbar">
+              <ul class="nav-list">
+                  <li><a href="#home" data-section="home">Home</a></li>
+                  <li><a href="#About" data-section="About">About</a></li>
+                  <li><a href="#services" data-section="services">Interests</a></li>
+                  <li><a href="#portfolio" data-section="portfolio">Projects</a></li>
+                  <li><a href="#Contact" data-section="Contact">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+
+      
+      <div class="header-text">
+        <div class="theme-toggle-container">
+            <span>Switch Theme</span>
+            <label class="theme-switch">
+              <input type="checkbox" id="theme-toggle" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          
+        <p class="title-animation">
+            <span class="title" data-title="Software Engineer.">Software Engineer.</span>
+            <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
+            <span class="title" data-title="UI/UX Designer.">UI/UX Designer.</span>
+        </p>
+        <h1>Hi, I am <span>Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
     </div>
+    
+</div>
+</div>
+  </header>
 </div>
 
 
- <!------------about----------->   
-<div id="About">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/me.jpg " >
-            </div>
-                  <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                       <p>Hi there! I'm a software engineer with a passion for solving complex problems and creating innovative solutions. I have experience working on projects from small web applications and I am always eager to learn new technologies.
 
-                        I thrive in fast-paced environments and enjoy working on projects that push me to learn and grow.
-                     </p>
+<!------------about----------->   
+<div id="About" class="animated-section">
+  <div class="container">
+      <div class="row">
+          <div class="about-col-1">
+              <img src="images/me.jpg" alt="Monicah Wamuhu">
+          </div>
+          <div class="about-col-2">
+              <h1 class="sub-title">About me</h1>
+              <p>Hi there! I'm a software engineer with a passion for solving complex problems and creating innovative solutions. I have experience working on projects from small web applications and I am always eager to learn new technologies. I thrive in fast-paced environments and enjoy working on projects that push me to learn and grow.</p>
+              
+              <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                  <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                  <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                  <ul>
+                      <li><span>•UI/UX</span><br>Designing web/app interfaces</li>
+                      <li><span>•Web development</span><br>Web app Development</li>
+                      <li><span>•App Development</span><br>Building Android/iOS apps</li>
+                  </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                  <ul>
+                      <li><span>2023</span><br>•Cybersecurity training at Moringa School</li>
+                      <li><span>2022</span><br>• Developed clean, effective code utilizing languages like Java and JavaScript while adhering to coding standards and best practices</li>
+                      <li><span>2023</span><br>• Experience in using the ArchGIS software for mapping at NCWSC</li>
+                  </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                  <ul>
+                      <li><span>•2021 - Present:</span><br>Multimedia University of Kenya - Bachelor of Science in Software Engineering</li>
+                      <li><span>•2017-2021</span><br>Pangani Girls’ Secondary School - Kenya Certificate Of Secondary Education</li>
+                      <li><span>•2014-2016</span><br>Little Friends Primary School - Kenya Certificate Of Primary Education</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
-                     <div class="tab-titles">
-                        
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links"onclick="opentab('education')">Education</p>
-
-                     </div>
-                     <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>•UI/UX</span><br>Designing web/app interfaces</li>
-                            <li><span>•Web development</span><br>Web app Development</li>
-                            <li><span>•App Development</span><br>Building Android/iOS apps</li>
-                        </ul>
-                     </div>
-                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2023</span><br>•Cybersecurity training at Moringa School</li>
-                            <li><span>2022</span><br>•	Developed clean, effective code utilizing languages like Java and JavaScript while adhering to coding standards and best practices</li>
-                            <li><span>2023</span><br>•Experience in using the archgis software for mapping  at NCWSC</li>
-                        </ul>
-                     </div>
-                     <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>•2021 - Present:</span><br>Multimedia University of Kenya
-                            Bachelor of Science in Software Engineering</li>
-                            <li><span>•2017-2021</span><br>Pangani Girls’ Secondary School
-                                Kenya Certificate Of Secondary Education
-                                Overall Grade - 78 ( A-)
-                   
-                   </li>
-                            <li><span>•2014-2016</span><br> Little Friends Primary School
-                                Kenya Certificate Of Primary Education
-                                Overall marks (415/500)
-                   </li>
-                        </ul>
-                     </div>
-                     
-                </div>
-            
-        </div>
-    </div>
-</div> 
 <!----------------- Tech Stack ------------------>
-<div id="tech-stack">
+<div id="tech-stack" class="animated-section">
     <div class="container">
         <h1 class="sub-title">Tech Stack</h1>
         <div class="tech-icons">
@@ -143,7 +142,7 @@
 </div>
 
 <!-------------------services-------------------->
-<div id="services">
+<div id="services" class="animated-section">
     <div class="container">
         <h1 class="sub-title">My Interests</h1>
         <div class="services-list">
@@ -170,7 +169,7 @@
     </div>
 </div>
 <!--------------------------portfolio--------------------->
-<div id="portfolio">
+<div id="portfolio" class="animated-section">
     <div class="container">
       <h1 class="sub-title">My Work</h1>
       <div class="work-list">
@@ -237,7 +236,7 @@
   
 
 <!-------------------------contact-------------->
-<div id="Contact">
+<div id="Contact" class="animated-section">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -271,7 +270,7 @@
         </div>
     </div>
 
-    <div class="rate-container">
+    <div class="rate-container" class="animated-section">
         <span class="rate-text">Rate My Portfolio: </span>
         <div class="star-rating">
             <label for="star1" class="star" data-tooltip="1 Star">&#9733;</label>
@@ -296,12 +295,19 @@
           Total Ratings: <span id="total-ratings">120</span>
         </p>
       </div>
+
+
       
     
-    <div class="copyright">
+    <div class="copyright" class="animated-section">
         <p> copyright © Monicah's Portfolio website <i class="fas fa-heart"></i></p> 
     </div>
 </div>
+
+      <!-- Back-to-Top Button -->
+      <button id="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
 
 
 
@@ -386,6 +392,144 @@ window.onload = function () {
     document.querySelector(`#star${savedRating}`).checked = true;
   }
 };
+
+let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+
+function updateRatingDisplay() {
+  const totalRatings = ratings.length;
+  const averageRating = totalRatings > 0 ? (ratings.reduce((sum, rating) => sum + rating, 0) / totalRatings).toFixed(1) : 0;
+
+  document.getElementById('avg-rating').textContent = averageRating;
+  document.getElementById('total-ratings').textContent = totalRatings;
+}
+
+document.querySelectorAll('.star-rating input').forEach(input => {
+  input.addEventListener('change', function () {
+    const rating = parseInt(this.value);
+    ratings.push(rating);
+
+    // Save ratings in localStorage
+    localStorage.setItem('ratings', JSON.stringify(ratings));
+
+    // Update the rating display
+    updateRatingDisplay();
+
+    // Optionally, show a message like "Thank you for rating!"
+    document.getElementById('thank-you-message').classList.add('visible');
+  });
+});
+
+// Initialize the rating display when the page loads
+window.onload = updateRatingDisplay;
+
+ // Initialize ScrollReveal
+ const sr = ScrollReveal({
+        distance: '50px',     // Distance for the animation
+        duration: 1000,       // Animation duration in milliseconds
+        easing: 'ease-in-out', // Easing function
+        reset: true           // Resets animation when the element goes out of view
+    });
+
+    // Define animations for specific sections
+    sr.reveal('#header .header-text', { origin: 'left', delay: 300 });
+    sr.reveal('#About .about-col-1', { origin: 'left', delay: 200 });
+    sr.reveal('#About .about-col-2', { origin: 'right', delay: 400 });
+    sr.reveal('#tech-stack .tech-icons .icon', { interval: 200 }); // Staggered animation
+    sr.reveal('#services .services-list div', { interval: 200 });
+    sr.reveal('#portfolio .work', { interval: 200 });
+    sr.reveal('#Contact .contact-left', { origin: 'left', delay: 200 });
+    sr.reveal('#Contact .contact-right', { origin: 'right', delay: 300 });
+
+
+    // Back-to-Top Button Functionality
+const backToTopButton = document.getElementById('back-to-top');
+
+// Show or hide the button based on scroll position
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block"; // Show button
+    } else {
+        backToTopButton.style.display = "none"; // Hide button
+    }
+};
+
+// Smooth scroll to the top
+backToTopButton.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Add custom cursor elements to the document
+const cursor = document.createElement('div');
+const trail = document.createElement('div');
+cursor.classList.add('custom-cursor');
+trail.classList.add('cursor-trail');
+document.body.appendChild(cursor);
+document.body.appendChild(trail);
+
+// Update cursor position
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+
+    // Move the cursor
+    cursor.style.transform = `translate(${x}px, ${y}px)`;
+
+    // Move the trail with a slight delay
+    trail.style.transform = `translate(${x}px, ${y}px)`;
+    trail.style.opacity = 1; // Ensure visibility on mouse movement
+});
+
+// Hide trail on mouse stop
+let hideTrailTimeout;
+document.addEventListener('mouseout', () => {
+    trail.style.opacity = 0;
+    clearTimeout(hideTrailTimeout);
+});
+
+// Add hover effects
+const hoverTargets = document.querySelectorAll('a, button, .hover-target'); // Customize selectors
+hoverTargets.forEach((target) => {
+    target.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover-effect');
+        trail.style.opacity = 0; // Optional: hide trail during hover
+    });
+
+    target.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover-effect');
+        trail.style.opacity = 1; // Restore trail after hover
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section, div[id]'); // Sections to track
+    const navLinks = document.querySelectorAll('#floating-navbar a');
+
+    const highlightNav = () => {
+        let currentSection = '';
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 50; // Adjust offset for header height
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.classList.remove('active');
+            if (link.dataset.section === currentSection) {
+                link.classList.add('active');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', highlightNav);
+});
 
 
 
