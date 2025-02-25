@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/70d315832b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     
@@ -20,49 +21,46 @@
 <!----------------- Header ------------------>
 <div class="container">
   <header>
-      <div class="nav-left">
-          <img src="images/mylogo.png" class="logo" alt="My Logo">
-      </div>
-      <div class="nav-right">
-          <div class="menu-toggle" id="mobile-menu">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-          </div>
-          <!-- Main Navigation Bar -->
-          <nav id="floating-navbar">
-              <ul class="nav-list">
-                  <li><a href="#home" data-section="home">Home</a></li>
-                  <li><a href="#About" data-section="About">About</a></li>
-                  <li><a href="#services" data-section="services">Interests</a></li>
-                  <li><a href="#portfolio" data-section="portfolio">Projects</a></li>
-                  <li><a href="#Contact" data-section="Contact">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-
-      
-      <div class="header-text">
-        <div class="theme-toggle-container">
-            <span>Switch Theme</span>
-            <label class="theme-switch">
-              <input type="checkbox" id="theme-toggle" />
-              <span class="slider"></span>
-            </label>
-          </div>
-          
-        <p class="title-animation">
-            <span class="title" data-title="Software Engineer.">Software Engineer.</span>
-            <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
-            <span class="title" data-title="UI/UX Designer.">UI/UX Designer.</span>
-        </p>
-        <h1>Hi, I am <span>Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
+    <div class="nav-left">
+        <img src="images/mylogo.png" class="logo" alt="My Logo">
     </div>
-    
-</div>
-</div>
+    <div class="nav-right">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <!-- Main Navigation Bar -->
+        <nav id="floating-navbar">
+            <ul class="nav-list">
+                <li><a href="#home" data-section="home">Home</a></li>
+                <li><a href="#About" data-section="About">About</a></li>
+                <li><a href="#services" data-section="services">Interests</a></li>
+                <li><a href="#portfolio" data-section="portfolio">Projects</a></li>
+                <li><a href="#Contact" data-section="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header-text">
+      <div class="theme-toggle-container">
+        <span>Switch Theme</span>
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      
+      <p class="title-animation">
+        <span class="title" data-title="Software Engineer.">Software Engineer.</span>
+        <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
+        <span class="title" data-title="UI/UX Designer.">UI/UX Designer.</span>
+      </p>
+      <h1>Hi, I am <span>Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
+    </div>
   </header>
 </div>
+
 
 
 
@@ -170,70 +168,103 @@
 </div>
 <!--------------------------portfolio--------------------->
 <div id="portfolio" class="animated-section">
-    <div class="container">
+  <div class="container">
       <h1 class="sub-title">My Work</h1>
       <div class="work-list">
-        <div class="work">
-          <div class="work-title">To-do list App</div>
-          <img src="images/todo.jpg" />
-          <div class="layer">
-            <h3>To-do list App</h3>
-            <p>
-              A simple application to add, delete, and manage tasks. It includes a
-              back-end that saves tasks and supports RESTful APIs for task
-              management.
-            </p>
-            <a
-              href="https://github.com/monicahwamuhu2/todo-list-app"
-              target="_blank"
-            >
-              <i class="fa-sharp fa-solid fa-link"></i>
-            </a>
+          <!-- UX Case Study 1 -->
+          <div class="work">
+              <div class="work-title">UX Case Study: EventPro</div>
+              <img src="images/EventPro.jpeg" />
+              <div class="layer">
+                  <h3>EventPro: Seamless Event Management</h3>
+                  <p>A UX case study on designing an intuitive event management platform.</p>
+                  <a href="https://munyuaui.blogspot.com/2025/02/eventpro-seamless-event-management.html" target="_blank">
+                      <i class="fa-sharp fa-solid fa-link"></i>
+                  </a>
+              </div>
           </div>
-        </div>
-        <div class="work">
-          <div class="work-title">Image Classifier</div>
-          <img src="images/classifier.jpg" />
-          <div class="layer">
-            <h3>Image Classifier</h3>
-            <p>
-              This project is a web-based image classification application built
-              using Flask, TensorFlow, and a pre-trained model on the CIFAR
-              dataset. Users can upload images to the web app, and it predicts the
-              class of the uploaded image.
-            </p>
-            <a
-              href="https://github.com/monicahwamuhu2/image-classifier.git"
-              target="_blank"
-            >
-              <i class="fa-sharp fa-solid fa-link"></i>
-            </a>
+          
+          <!-- UX Case Study 2 -->
+          <div class="work">
+              <div class="work-title">UX Case Study: School Website</div>
+              <img src="images/school.jpeg" />
+              <div class="layer">
+                  <h3>School Website Design</h3>
+                  <p>A case study on creating an engaging school website.</p>
+                  <a href="https://munyuaui.blogspot.com/2025/02/school-website-design-case-study.html" target="_blank">
+                      <i class="fa-sharp fa-solid fa-link"></i>
+                  </a>
+              </div>
           </div>
-        </div>
-        <div class="work">
-          <div class="work-title">Weather App</div>
-          <img src="images/weather.jpg" />
-          <div class="layer">
-            <h3>Weather App</h3>
-            <p>
-              A simple and visually appealing weather application that allows
-              users to search for current weather conditions in any city using
-              the OpenWeatherMap API. The app provides temperature, weather
-              description, and an icon representing the weather condition.
-            </p>
-            <a
-              href="https://monicahwamuhu2.github.io/Weather-app/"
-              target="_blank"
-            >
-              <i class="fa-sharp fa-solid fa-link"></i>
-            </a>
-          </div>
-        </div>
       </div>
-      <a href="https://github.com/monicahwamuhu2" class="button">See More</a>
+      <div class="portfolio-container">
+        <!-- Table Reservation System Card -->
+        <div class="portfolio-card">
+            <h2 class="slideshow-title">Table Reservation System</h2>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="images/image1.jpeg" alt="Design 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image2.jpeg" alt="Design 2">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image3.jpeg" alt="Design 3">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image4.jpeg" alt="Design 4">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image5.jpeg" alt="Design 5">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image5.jpeg" alt="Design 6">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image7.jpeg" alt="Design 7">
+                </div>
+                <div class="slide fade">
+                    <img src="images/image8.jpeg" alt="Design 8">
+                </div>
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+            <a href="https://github.com/monicahwamuhu2" class="button">See More</a>
+        </div>
+    
+        <!-- Currency Exchange Platform Card -->
+        <div class="portfolio-card">
+            <h2 class="slideshow-title">Currency Exchange Platform</h2>
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="images/pic1.jpeg" alt="Currency Exchange 1">
+                </div>
+                <div class="slide fade">
+                    <img src="images/pic2.jpeg" alt="Currency Exchange 2">
+                </div>
+                <div class="slide fade">
+                    <img src="images/pic3.jpeg" alt="Currency Exchange 3">
+                </div>
+                <div class="slide fade">
+                    <img src="images/pic4.jpeg" alt="Currency Exchange 4">
+                </div>
+                <div class="slide fade">
+                    <img src="images/pic5.jpeg" alt="Currency Exchange 5">
+                </div>
+                <div class="slide fade">
+                    <img src="images/pic6.jpeg" alt="Currency Exchange 6">
+                </div>
+                <div class="slide fade">
+                    <img src="images/pic7.jpeg" alt="Currency Exchange 7">
+                </div>
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+            <a href="https://github.com/monicahwamuhu2" class="button">See More</a>
+        </div>
     </div>
-  </div>
-  
+    
+
 
 <!-------------------------contact-------------->
 <div id="Contact" class="animated-section">
@@ -251,7 +282,7 @@
 
                 </div>
 
-                <a href="images/Monicah Wamuhu CV.pdf" download class="button btn2">Download Resume</a>
+                <a href="images/Resume.pdf" download class="button btn2">Download Resume</a>
 
             </div>
             <div class="contact-right">
@@ -270,31 +301,7 @@
         </div>
     </div>
 
-    <div class="rate-container" class="animated-section">
-        <span class="rate-text">Rate My Portfolio: </span>
-        <div class="star-rating">
-            <label for="star1" class="star" data-tooltip="1 Star">&#9733;</label>
-            <label for="star2" class="star" data-tooltip="2 Stars">&#9733;</label>
-            <label for="star3" class="star" data-tooltip="3 Stars">&#9733;</label>
-            <label for="star4" class="star" data-tooltip="4 Stars">&#9733;</label>
-            <label for="star5" class="star" data-tooltip="5 Stars">&#9733;</label>
-            
-        </div>
-        <div class="rating-feedback">
-          <p id="rating-result">No rating yet.</p>
-        </div>    
-          
-      </div>
-
-      <div class="rating-display">
-        <h3>Website Rating</h3>
-        <p class="avg-rating-text">
-          Average Rating: <span id="avg-rating">4.5</span> ⭐
-        </p>
-        <p class="total-ratings-text">
-          Total Ratings: <span id="total-ratings">120</span>
-        </p>
-      </div>
+ 
 
 
       
@@ -531,8 +538,39 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightNav);
 });
 
+let slideIndexes = [0, 0]; // Stores index for each slideshow
+let slideContainers = document.querySelectorAll(".slideshow-container");
 
+function showSlides(slideshowIndex) {
+    let slides = slideContainers[slideshowIndex].getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slideIndexes[slideshowIndex]++;
+    if (slideIndexes[slideshowIndex] > slides.length) {
+        slideIndexes[slideshowIndex] = 1;
+    }
+    slides[slideIndexes[slideshowIndex] - 1].classList.add("active");
+    setTimeout(() => showSlides(slideshowIndex), 3000);
+}
 
+function plusSlides(n, slideshowIndex) {
+    slideIndexes[slideshowIndex] += n - 1;
+    showSlides(slideshowIndex);
+}
+
+// Initialize both slideshows
+showSlides(0);
+showSlides(1);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const floatingNavbar = document.querySelector("#floating-navbar");
+
+    menuToggle.addEventListener("click", function() {
+      floatingNavbar.classList.toggle("active");
+    });
+  });
 
 </script>
 
