@@ -4,575 +4,659 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio website</title>
+    <meta name="description" content="Monicah Wamuhu - Software Engineer, AI/ML Enthusiast, and UI/UX Designer from Nairobi, Kenya">
+    <meta name="keywords" content="software engineer, portfolio, AI/ML, UI/UX design, web development, Kenya">
+    <meta name="author" content="Monicah Wamuhu">
+    <title>Monicah Wamuhu - Software Engineer Portfolio</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/70d315832b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
     
-
-
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/70d315832b.js" crossorigin="anonymous"></script>
+    
+    <!-- Page enhancement scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
 </head>
 <body>
-
-<!----------------- Header ------------------>
-<div class="container">
-  <header>
-    <div class="nav-left">
-        <img src="images/mylogo.png" class="logo" alt="My Logo">
-    </div>
-    <div class="nav-right">
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <!-- Main Navigation Bar -->
-        <nav id="floating-navbar">
-            <ul class="nav-list">
-                <li><a href="#home" data-section="home">Home</a></li>
-                <li><a href="#About" data-section="About">About</a></li>
-                <li><a href="#services" data-section="services">Interests</a></li>
-                <li><a href="#portfolio" data-section="portfolio">Projects</a></li>
-                <li><a href="#Contact" data-section="Contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Loading Overlay -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
     </div>
 
-    <div class="header-text">
-      <div class="theme-toggle-container">
-        <span>Switch Theme</span>
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-toggle" />
-          <span class="slider"></span>
-        </label>
-      </div>
-      
-      <p class="title-animation">
-        <span class="title" data-title="Software Engineer.">Software Engineer.</span>
-        <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
-        <span class="title" data-title="UI/UX Designer.">UI/UX Designer.</span>
-      </p>
-      <h1>Hi, I am <span>Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
-    </div>
-  </header>
-</div>
-
-
-
-
-<!------------about----------->   
-<div id="About" class="animated-section">
-  <div class="container">
-      <div class="row">
-          <div class="about-col-1">
-              <img src="images/me.jpg" alt="Monicah Wamuhu">
-          </div>
-          <div class="about-col-2">
-              <h1 class="sub-title">About me</h1>
-              <p>Hi there! I'm a software engineer with a passion for solving complex problems and creating innovative solutions. I have experience working on projects from small web applications and I am always eager to learn new technologies. I thrive in fast-paced environments and enjoy working on projects that push me to learn and grow.</p>
-              
-              <div class="tab-titles">
-                  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                  <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                  <p class="tab-links" onclick="opentab('education')">Education</p>
-              </div>
-              <div class="tab-contents active-tab" id="skills">
-                  <ul>
-                      <li><span>•UI/UX</span><br>Designing web/app interfaces</li>
-                      <li><span>•Web development</span><br>Web app Development</li>
-                      <li><span>•App Development</span><br>Building Android/iOS apps</li>
-                  </ul>
-              </div>
-              <div class="tab-contents" id="experience">
-                  <ul>
-                      <li><span>2023</span><br>•Cybersecurity training at Moringa School</li>
-                      <li><span>2022</span><br>• Developed clean, effective code utilizing languages like Java and JavaScript while adhering to coding standards and best practices</li>
-                      <li><span>2023</span><br>• Experience in using the ArchGIS software for mapping at NCWSC</li>
-                  </ul>
-              </div>
-              <div class="tab-contents" id="education">
-                  <ul>
-                      <li><span>•2021 - Present:</span><br>Multimedia University of Kenya - Bachelor of Science in Software Engineering</li>
-                      <li><span>•2017-2021</span><br>Pangani Girls’ Secondary School - Kenya Certificate Of Secondary Education</li>
-                      <li><span>•2014-2016</span><br>Little Friends Primary School - Kenya Certificate Of Primary Education</li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!----------------- Tech Stack ------------------>
-<div id="tech-stack" class="animated-section">
-    <div class="container">
-        <h1 class="sub-title">Tech Stack</h1>
-        <div class="tech-icons">
-            <div class="icon tech-html5">
-                <i class="fab fa-html5"></i>
-                <p>HTML5</p>
+    <!-- Header Section -->
+    <header id="home" class="section-wrapper">
+        <div class="header-content">
+            <div class="nav-wrapper">
+                <div class="nav-left">
+                    <img src="images/mylogo.png" class="logo" alt="Monicah Wamuhu Logo">
+                </div>
+                <div class="nav-right">
+                    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <!-- Main Navigation Bar -->
+                    <nav id="floating-navbar" aria-label="Main navigation">
+                        <ul class="nav-list">
+                            <li><a href="#home" data-section="home">Home</a></li>
+                            <li><a href="#About" data-section="About">About</a></li>
+                            <li><a href="#tech-stack" data-section="tech-stack">Skills</a></li>
+                            <li><a href="#services" data-section="services">Interests</a></li>
+                            <li><a href="#portfolio" data-section="portfolio">Projects</a></li>
+                            <li><a href="#Contact" data-section="Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <div class="icon tech-css3">
-                <i class="fab fa-css3-alt"></i>
-                <p>CSS3</p>
-            </div>
-            <div class="icon tech-js">
-                <i class="fab fa-js-square"></i>
-                <p>JavaScript</p>
-            </div>
-            <div class="icon tech-react">
-                <i class="fab fa-react"></i>
-                <p>React</p>
-            </div>
-            <div class="icon tech-python">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-            </div>
-            <div class="icon tech-nodejs">
-                <i class="fab fa-node"></i>
-                <p>Node.js</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-------------------services-------------------->
-<div id="services" class="animated-section">
-    <div class="container">
-        <h1 class="sub-title">My Interests</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-sharp fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Crafting visually stunning and responsive websites that prioritize user experience. From clean code to aesthetic design, I aim to create impactful digital solutions that tell a story.</p>
-                <a href="https://medium.com/@monicahwamuhu2/web-design-your-digital-first-impression-41e4110ff0d2">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-sharp fa-solid fa-crop"></i>
-
-                <h2>UI/UX design</h2>
-                <p>Designing intuitive and user-friendly interfaces that bridge functionality and creativity. My goal is to enhance the user journey through thoughtful, data-driven design.</p>
-                <a href="https://medium.com/@monicahwamuhu2/ui-ux-the-secret-sauce-behind-great-apps-a9e17af2f4fd">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-sharp fa-solid fa-expand"></i>
-                <h2>AI/ML</h2>
-                <p>Exploring the frontiers of artificial intelligence and machine learning to build intelligent systems that simplify complex tasks and empower decision-making through data.</p>
-                <a href="https://medium.com/@monicahwamuhu2/the-fun-side-of-ai-ml-where-robots-get-smarter-and-humans-get-cooler-3cbbede62283">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!--------------------------portfolio--------------------->
-<div id="portfolio" class="animated-section">
-  <div class="container">
-      <h1 class="sub-title">My Work</h1>
-      <div class="work-list">
-          <!-- UX Case Study 1 -->
-          <div class="work">
-              <div class="work-title">UX Case Study: EventPro</div>
-              <img src="images/EventPro.jpeg" />
-              <div class="layer">
-                  <h3>EventPro: Seamless Event Management</h3>
-                  <p>A UX case study on designing an intuitive event management platform.</p>
-                  <a href="https://munyuaui.blogspot.com/2025/02/eventpro-seamless-event-management.html" target="_blank">
-                      <i class="fa-sharp fa-solid fa-link"></i>
-                  </a>
-              </div>
-          </div>
-          
-          <!-- UX Case Study 2 -->
-          <div class="work">
-              <div class="work-title">UX Case Study: School Website</div>
-              <img src="images/school.jpeg" />
-              <div class="layer">
-                  <h3>School Website Design</h3>
-                  <p>A case study on creating an engaging school website.</p>
-                  <a href="https://munyuaui.blogspot.com/2025/02/school-website-design-case-study.html" target="_blank">
-                      <i class="fa-sharp fa-solid fa-link"></i>
-                  </a>
-              </div>
-          </div>
-      </div>
-      <div class="portfolio-container">
-        <!-- Table Reservation System Card -->
-        <div class="portfolio-card">
-            <h2 class="slideshow-title">Table Reservation System</h2>
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="images/image1.jpeg" alt="Design 1">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image2.jpeg" alt="Design 2">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image3.jpeg" alt="Design 3">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image4.jpeg" alt="Design 4">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image5.jpeg" alt="Design 5">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image5.jpeg" alt="Design 6">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image7.jpeg" alt="Design 7">
-                </div>
-                <div class="slide fade">
-                    <img src="images/image8.jpeg" alt="Design 8">
-                </div>
-                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-            </div>
-            <a href="https://github.com/monicahwamuhu2" class="button">See More</a>
-        </div>
-    
-        <!-- Currency Exchange Platform Card -->
-        <div class="portfolio-card">
-            <h2 class="slideshow-title">Currency Exchange Platform</h2>
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="images/pic1.jpeg" alt="Currency Exchange 1">
-                </div>
-                <div class="slide fade">
-                    <img src="images/pic2.jpeg" alt="Currency Exchange 2">
-                </div>
-                <div class="slide fade">
-                    <img src="images/pic3.jpeg" alt="Currency Exchange 3">
-                </div>
-                <div class="slide fade">
-                    <img src="images/pic4.jpeg" alt="Currency Exchange 4">
-                </div>
-                <div class="slide fade">
-                    <img src="images/pic5.jpeg" alt="Currency Exchange 5">
-                </div>
-                <div class="slide fade">
-                    <img src="images/pic6.jpeg" alt="Currency Exchange 6">
-                </div>
-                <div class="slide fade">
-                    <img src="images/pic7.jpeg" alt="Currency Exchange 7">
-                </div>
-                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-            </div>
-            <a href="https://github.com/monicahwamuhu2" class="button">See More</a>
-        </div>
-    </div>
-    
-
-
-<!-------------------------contact-------------->
-<div id="Contact" class="animated-section">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-sharp fa-regular fa-paper-plane"></i>monicahwamuhu2@gmail.com</p>
-                <p><i class="fa-solid fa-phone-volume"></i>+254-717192945</p>
-                <div class="social-icons">
-                   <a href="https://www.instagram.com/_.wamuhuuu/"><i class="fa-brands fa-square-instagram"></i></a>
-                   <a href="https://twitter.com/home"><i class=" fab fa-twitter-square"></i></a>
-                   <a href="https://www.linkedin.com/in/monicah-wamuhu/"><i class="fab fa-linkedin"></i></a>
-                   <a href="https://secure.skype.com/portal/profile"><i class="fab fa-skype"></i></a>
-
-                </div>
-
-                <a href="images/Resume.pdf" download class="button btn2">Download Resume</a>
-
-            </div>
-            <div class="contact-right">
-                <form action="https://formspree.io/f/mwpkqdnl"
-                method="POST">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message"  rows="6" placeholder="Your Messsage" ></textarea>
-                    <button type="submit"class="button btn2">Submit</button>
-
+            <div class="header-text">
+                <div class="hero-content">
+                    <div class="animated-text-wrapper">
+                        <div class="title-animation">
+                            <span class="title" data-title="Software Engineer.">Software Engineer.</span>
+                            <span class="title" data-title="AI/ML Enthusiast.">AI/ML Enthusiast.</span>
+                            <span class="title" data-title="UI/UX Designer.">UI/UX Designer.</span>
+                        </div>
+                    </div>
+                    <h1 class="animated-heading">Hi, I am <span class="highlight">Monicah</span><br> Wamuhu from Nairobi, Kenya.</h1>
                     
-                </form>
-
+                    <div class="hero-cta">
+                        <a href="#portfolio" class="button btn-primary">View My Work</a>
+                        <a href="#Contact" class="button btn-secondary">Contact Me</a>
+                    </div>
+                </div>
             </div>
             
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="scroll-text">Scroll Down</div>
+            </div>
         </div>
-    </div>
+        
+        <div class="section-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="animated-bg">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+            <div class="square square-1"></div>
+            <div class="square square-2"></div>
+            <div class="square square-3"></div>
+        </div>
+    </header>
 
- 
+    <!-- About Section -->
+    <section id="About" class="section-wrapper about-section">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            
+            <div class="row">
+                <div class="about-col-1">
+                    <div class="profile-image-container">
+                        <img src="images/me.jpg" alt="Monicah Wamuhu" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <p class="about-description">
+                        Hi there! I'm a software engineering student passionate about AI and cloud technologies with experience in 
+                        application development, automation, and technical community leadership. I'm skilled in Python, AI frameworks, 
+                        and project management with a proven track record of developing impactful applications and organizing technical events.
+                    </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>AI/ML Development</span><br>Building intelligent applications using Python and AI frameworks</li>
+                            <li><span>UI/UX Design</span><br>Designing intuitive web and app interfaces</li>
+                            <li><span>Web Development</span><br>Building responsive web applications</li>
+                            <li><span>Cloud Technologies</span><br>Working with Azure and Oracle Cloud Infrastructure</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024</span><br>• Intern (Innovation Sector) at Nairobi City County</li>
+                            <li><span>2023</span><br>• Business Application Developer at Nairobi City Water and Sewerage Company</li>
+                            <li><span>2024</span><br>• Web Master at IEEE Computer Society</li>
+                            <li><span>Ongoing</span><br>• Co-Founder of Geek-ssters technical community</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2025 (Expected)</span><br>Multimedia University of Kenya - Bachelor of Science in Software Engineering</li>
+                            <li><span>2024 - Present</span><br>Power Learn Project - Software Engineering Certification (Major in AI for Software Development)</li>
+                            <li><span>Certifications</span><br>• Microsoft Azure AI Fundamentals<br>• IBM Artificial Intelligence Fundamentals<br>• Oracle Cloud Infrastructure Foundations Associate<br>• Data Protection Certificate - CIPIT, Strathmore University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="section-wrapper tech-section">
+        <div class="container">
+            <h2 class="section-title">Tech <span class="highlight">Stack</span></h2>
+            <div class="tech-icons">
+                <div class="icon tech-html5" aria-label="HTML5">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div class="icon tech-css3" aria-label="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div class="icon tech-js" aria-label="JavaScript">
+                    <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </div>
+                <div class="icon tech-react" aria-label="React">
+                    <i class="fab fa-react"></i>
+                    <p>React</p>
+                </div>
+                <div class="icon tech-python" aria-label="Python">
+                    <i class="fab fa-python"></i>
+                    <p>Python</p>
+                </div>
+                <div class="icon tech-nodejs" aria-label="Node.js">
+                    <i class="fab fa-node"></i>
+                    <p>Node.js</p>
+                </div>
+                <!-- Added UI/UX specific icons -->
+                <div class="icon tech-figma" aria-label="Figma">
+                    <i class="fab fa-figma"></i>
+                    <p>Figma</p>
+                </div>
+                <div class="icon tech-adobe" aria-label="Adobe XD">
+                    <i class="fab fa-adobe"></i>
+                    <p>Adobe XD</p>
+                </div>
+                <div class="icon tech-sketch" aria-label="Sketch">
+                    <i class="fab fa-sketch"></i>
+                    <p>Sketch</p>
+                </div>
+                <div class="icon tech-azure" aria-label="Azure">
+                    <i class="fab fa-microsoft"></i>
+                    <p>Azure</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
-      
-    
-    <div class="copyright" class="animated-section">
-        <p> copyright © Monicah's Portfolio website <i class="fas fa-heart"></i></p> 
-    </div>
-</div>
+    <!-- Services/Interests Section -->
+    <section id="services" class="section-wrapper services-section">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Interests</span></h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h3>Web Design</h3>
+                    <p>Crafting visually stunning and responsive websites that prioritize user experience. From clean code to aesthetic design, I aim to create impactful digital solutions that tell a story.</p>
+                    <a href="https://medium.com/@monicahwamuhu2/web-design-your-digital-first-impression-41e4110ff0d2" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <i class="fa-sharp fa-solid fa-crop"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Designing intuitive and user-friendly interfaces that bridge functionality and creativity. My goal is to enhance the user journey through thoughtful, data-driven design.</p>
+                    <a href="https://medium.com/@monicahwamuhu2/ui-ux-the-secret-sauce-behind-great-apps-a9e17af2f4fd" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <i class="fa-sharp fa-solid fa-expand"></i>
+                    <h3>AI/ML</h3>
+                    <p>Exploring the frontiers of artificial intelligence and machine learning to build intelligent systems that simplify complex tasks and empower decision-making through data.</p>
+                    <a href="https://medium.com/@monicahwamuhu2/the-fun-side-of-ai-ml-where-robots-get-smarter-and-humans-get-cooler-3cbbede62283" target="_blank" rel="noopener noreferrer">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
-      <!-- Back-to-Top Button -->
-      <button id="back-to-top" title="Go to top">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-wrapper portfolio-section">
+        <div class="container">
+            <h2 class="section-title">My <span class="highlight">Work</span></h2>
+            
+            <!-- Development Projects Section -->
+            <h3 class="portfolio-subtitle">AI & Software Development Projects</h3>
+            <div class="dev-projects-grid">
+                <!-- Mindful Connect -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3>Mindful Connect</h3>
+                            <p>An AI-powered mental health monitoring application using natural language processing that matches users with therapists based on their preferences.</p>
+                            <div class="project-tech-stack">
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>Machine Learning</span>
+                                <span>Flask</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/monicahwamuhu2/MC-frontend" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="https://mc-frontend-8848.onrender.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mental Health Chatbot -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3>Mental Health Chatbot</h3>
+                            <p>A conversational AI companion designed to provide mental health support by analyzing user inputs and offering emotional assistance. It leverages sentiment analysis to detect distress and suggests helpful resources or coping strategies.</p>
+                            <div class="project-tech-stack">
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>Sentiment Analysis</span>
+                                <span>Dialog Systems</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/monicahwamuhu2/frontend-deploy" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="https://frontend-deploy-git-master-monicahs-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Innovation Week Website -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3>Innovation Week Website – MMU</h3>
+                            <p>Created a centralized web platform for MMU Innovation Week to consolidate event details and enabled easier access to schedules, speaker information, and announcements.</p>
+                            <div class="project-tech-stack">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>Bootstrap</span>
+                                <span>PHP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/monicahwamuhu2/innovation-week" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="https://innovation-week-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Traffic Management System -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-traffic-light"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3>Traffic Management System</h3>
+                            <p>A web-based system aimed at optimizing traffic flow in urban areas. It utilizes real-time data analysis to predict congestion, manage road signals, and improve transportation efficiency.</p>
+                            <div class="project-tech-stack">
+                                <span>Python</span>
+                                <span>Data Analysis</span>
+                                <span>Web Development</span>
+                                <span>IoT</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/monicahwamuhu2/traffic-management-system" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Management System -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3>Event Management System</h3>
+                            <p>A platform that simplifies event planning by allowing users to schedule, manage, and track events. It features user registration, event invitations, and automated notifications to enhance coordination.</p>
+                            <div class="project-tech-stack">
+                                <span>React JS</span>
+                                <span>JavaScript</span>
+                                <span>Node.js</span>
+                                <span>MySQL</span>
+                                <span>Express</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/monicahwamuhu2/Event-Management-System-Grp-16" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- To-Do List App -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3>To-Do List App</h3>
+                            <p>A simple yet efficient task management app that helps users organize their daily activities. It includes features such as task categorization, due date reminders, and progress tracking.</p>
+                            <div class="project-tech-stack">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>Local Storage</span>
+                                <span>Progressive Web App</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/monicahwamuhu2/todo-list-app" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Case Studies Grid -->
+            <h3 class="portfolio-subtitle">UX Case Studies</h3>
+            <div class="case-studies-grid">
+                <!-- UX Case Study 1 -->
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/EventPro.jpeg" alt="EventPro case study thumbnail" loading="lazy">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>EventPro: Seamless Event Management</h3>
+                        <p>A UX case study on designing an intuitive event management platform that helps organizers create, manage, and promote events efficiently.</p>
+                        <div class="case-study-tags">
+                            <span>UX Research</span>
+                            <span>UI Design</span>
+                            <span>Prototyping</span>
+                        </div>
+                        <a href="https://munyuaui.blogspot.com/2025/02/eventpro-seamless-event-management.html" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                            View Case Study <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- UX Case Study 2 -->
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/school.jpeg" alt="School website design case study thumbnail" loading="lazy">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>School Website Design</h3>
+                        <p>A case study on creating an engaging and user-friendly school website that improves communication between students, parents, and teachers.</p>
+                        <div class="case-study-tags">
+                            <span>Web Design</span>
+                            <span>User Testing</span>
+                            <span>Information Architecture</span>
+                        </div>
+                        <a href="https://munyuaui.blogspot.com/2025/02/school-website-design-case-study.html" target="_blank" rel="noopener noreferrer" class="case-study-btn">
+                            View Case Study <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UI Design Projects -->
+            <h3 class="portfolio-subtitle">UI Design Projects</h3>
+            
+            <!-- Lightbox Gallery for UI Projects -->
+            <div class="ui-designs-grid">
+                <!-- Table Reservation System Designs -->
+                <div class="ui-design-category">
+                    <h3 class="category-title">Table Reservation System</h3>
+                    <div class="ui-designs-container">
+                        <div class="ui-design-item" onclick="openLightbox(0, 0)">
+                            <img src="images/image1.jpeg" alt="Table Reservation UI Design 1" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Booking Interface</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                        <div class="ui-design-item" onclick="openLightbox(0, 1)">
+                            <img src="images/image2.jpeg" alt="Table Reservation UI Design 2" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Restaurant Selection</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                        <div class="ui-design-item" onclick="openLightbox(0, 2)">
+                            <img src="images/image3.jpeg" alt="Table Reservation UI Design 3" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Confirmation Screen</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                        <div class="ui-design-item" onclick="openLightbox(0, 3)">
+                            <img src="images/image4.jpeg" alt="Table Reservation UI Design 4" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>User Dashboard</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-description">
+                        <p>A comprehensive restaurant table booking system with user-friendly interface and real-time availability updates.</p>
+                        <a href="https://github.com/monicahwamuhu2" class="github-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Currency Exchange Platform Designs -->
+                <div class="ui-design-category">
+                    <h3 class="category-title">Currency Exchange Platform</h3>
+                    <div class="ui-designs-container">
+                        <div class="ui-design-item" onclick="openLightbox(1, 0)">
+                            <img src="images/pic1.jpeg" alt="Currency Exchange UI Design 1" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Main Dashboard</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                        <div class="ui-design-item" onclick="openLightbox(1, 1)">
+                            <img src="images/pic2.jpeg" alt="Currency Exchange UI Design 2" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Exchange Rates</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                        <div class="ui-design-item" onclick="openLightbox(1, 2)">
+                            <img src="images/pic3.jpeg" alt="Currency Exchange UI Design 3" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Conversion Calculator</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                        <div class="ui-design-item" onclick="openLightbox(1, 3)">
+                            <img src="images/pic4.jpeg" alt="Currency Exchange UI Design 4" loading="lazy">
+                            <div class="ui-design-overlay">
+                                <h4>Transaction History</h4>
+                                <span class="view-text">Click to Expand</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-description">
+                        <p>A digital platform for multi-currency exchange with live rates, conversion calculator, and historical rate charts.</p>
+                        <a href="https://github.com/monicahwamuhu2" class="github-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lightbox Modal -->
+            <div id="lightbox-modal" class="lightbox">
+                <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+                <div class="lightbox-content">
+                    <img id="lightbox-image" src="" alt="Enlarged UI Design">
+                    <div class="lightbox-caption" id="lightbox-caption"></div>
+                </div>
+                <div class="lightbox-navigation">
+                    <a class="prev" onclick="changeLightboxImage(-1)">&#10094;</a>
+                    <a class="next" onclick="changeLightboxImage(1)">&#10095;</a>
+                </div>
+                <div class="lightbox-counter" id="lightbox-counter"></div>
+            </div>
+        </div>
+        <div class="section-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="Contact" class="section-wrapper contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+            
+            <div class="contact-container">
+                <div class="contact-left">
+                    <div class="contact-info">
+                        <div class="contact-info-item animate-on-scroll">
+                            <i class="fa-sharp fa-regular fa-paper-plane"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>monicahwamuhu2@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item animate-on-scroll">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+254-717192945</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item animate-on-scroll">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/_.wamuhuuu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon-item">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/home" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon-item">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/monicah-wamuhu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-item">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/monicahwamuhu2" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-item">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+                    <a href="images/Monicah Wamuhu CV.pdf" download class="download-cv-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                
+                <div class="contact-right">
+                    <div class="contact-form-container">
+                        <h3>Send Me a Message</h3>
+                        <form action="https://formspree.io/f/mwpkqdnl" method="POST" id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Your Name</label>
+                                <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="sr-only">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Your Message</label>
+                                <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 Monicah Wamuhu. All rights reserved. <i class="fas fa-heart"></i></p> 
+        </div>
+    </section>
+
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" title="Go to top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
-      </button>
+    </button>
 
+    <!-- Custom cursor elements -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
 
-
-
-  
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const icons = document.querySelectorAll(".icon");
-    let index = 0;
-
-    setInterval(() => {
-        icons.forEach((icon, i) => {
-            icon.style.opacity = i === index ? "1" : "0.2"; // Highlight active icon
-        });
-        index = (index + 1) % icons.length; // Loop through icons
-    }, 2000); // 2-second interval
-});
-
-const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.querySelector('.nav-list');
-
-mobileMenu.addEventListener('click', () => {
-    navList.classList.toggle('active');
-});
-
-// Select the theme toggle input
-const themeToggle = document.getElementById('theme-toggle');
-
-// Check the user's saved theme in localStorage or default to light
-const savedTheme = localStorage.getItem('theme') || 'light';
-document.documentElement.setAttribute('data-theme', savedTheme);
-
-// Set the toggle switch state based on the saved theme
-themeToggle.checked = savedTheme === 'dark';
-
-// Listen for toggle switch changes
-themeToggle.addEventListener('change', () => {
-    const newTheme = themeToggle.checked ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
-
-
-// JavaScript to handle rating selection and display result
-document.querySelectorAll('.star-rating input').forEach(input => {
-  input.addEventListener('change', function () {
-    let rating = this.value;
-
-    // Display the rating result with smooth animation
-    let ratingText = `You rated this portfolio: ${rating} star${rating > 1 ? 's' : ''}.`;
-    let feedbackElement = document.getElementById('rating-result');
-
-    feedbackElement.textContent = ratingText;
-    feedbackElement.classList.add('visible');  // Apply animation class
-
-    // Optionally, store the rating in localStorage
-    localStorage.setItem('portfolioRating', rating);
-  });
-});
-
-// On page load, retrieve saved rating from localStorage (if available)
-window.onload = function () {
-  let savedRating = localStorage.getItem('portfolioRating');
-  if (savedRating) {
-    let feedbackElement = document.getElementById('rating-result');
-    feedbackElement.textContent = `You previously rated this portfolio: ${savedRating} star${savedRating > 1 ? 's' : ''}.`;
-    feedbackElement.classList.add('visible');  // Apply animation class
-    // Set the radio button corresponding to the saved rating
-    document.querySelector(`#star${savedRating}`).checked = true;
-  }
-};
-
-let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
-
-function updateRatingDisplay() {
-  const totalRatings = ratings.length;
-  const averageRating = totalRatings > 0 ? (ratings.reduce((sum, rating) => sum + rating, 0) / totalRatings).toFixed(1) : 0;
-
-  document.getElementById('avg-rating').textContent = averageRating;
-  document.getElementById('total-ratings').textContent = totalRatings;
-}
-
-document.querySelectorAll('.star-rating input').forEach(input => {
-  input.addEventListener('change', function () {
-    const rating = parseInt(this.value);
-    ratings.push(rating);
-
-    // Save ratings in localStorage
-    localStorage.setItem('ratings', JSON.stringify(ratings));
-
-    // Update the rating display
-    updateRatingDisplay();
-
-    // Optionally, show a message like "Thank you for rating!"
-    document.getElementById('thank-you-message').classList.add('visible');
-  });
-});
-
-// Initialize the rating display when the page loads
-window.onload = updateRatingDisplay;
-
- // Initialize ScrollReveal
- const sr = ScrollReveal({
-        distance: '50px',     // Distance for the animation
-        duration: 1000,       // Animation duration in milliseconds
-        easing: 'ease-in-out', // Easing function
-        reset: true           // Resets animation when the element goes out of view
-    });
-
-    // Define animations for specific sections
-    sr.reveal('#header .header-text', { origin: 'left', delay: 300 });
-    sr.reveal('#About .about-col-1', { origin: 'left', delay: 200 });
-    sr.reveal('#About .about-col-2', { origin: 'right', delay: 400 });
-    sr.reveal('#tech-stack .tech-icons .icon', { interval: 200 }); // Staggered animation
-    sr.reveal('#services .services-list div', { interval: 200 });
-    sr.reveal('#portfolio .work', { interval: 200 });
-    sr.reveal('#Contact .contact-left', { origin: 'left', delay: 200 });
-    sr.reveal('#Contact .contact-right', { origin: 'right', delay: 300 });
-
-
-    // Back-to-Top Button Functionality
-const backToTopButton = document.getElementById('back-to-top');
-
-// Show or hide the button based on scroll position
-window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopButton.style.display = "block"; // Show button
-    } else {
-        backToTopButton.style.display = "none"; // Hide button
-    }
-};
-
-// Smooth scroll to the top
-backToTopButton.addEventListener('click', function () {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Add custom cursor elements to the document
-const cursor = document.createElement('div');
-const trail = document.createElement('div');
-cursor.classList.add('custom-cursor');
-trail.classList.add('cursor-trail');
-document.body.appendChild(cursor);
-document.body.appendChild(trail);
-
-// Update cursor position
-document.addEventListener('mousemove', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    // Move the cursor
-    cursor.style.transform = `translate(${x}px, ${y}px)`;
-
-    // Move the trail with a slight delay
-    trail.style.transform = `translate(${x}px, ${y}px)`;
-    trail.style.opacity = 1; // Ensure visibility on mouse movement
-});
-
-// Hide trail on mouse stop
-let hideTrailTimeout;
-document.addEventListener('mouseout', () => {
-    trail.style.opacity = 0;
-    clearTimeout(hideTrailTimeout);
-});
-
-// Add hover effects
-const hoverTargets = document.querySelectorAll('a, button, .hover-target'); // Customize selectors
-hoverTargets.forEach((target) => {
-    target.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover-effect');
-        trail.style.opacity = 0; // Optional: hide trail during hover
-    });
-
-    target.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover-effect');
-        trail.style.opacity = 1; // Restore trail after hover
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section, div[id]'); // Sections to track
-    const navLinks = document.querySelectorAll('#floating-navbar a');
-
-    const highlightNav = () => {
-        let currentSection = '';
-
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop - 50; // Adjust offset for header height
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach((link) => {
-            link.classList.remove('active');
-            if (link.dataset.section === currentSection) {
-                link.classList.add('active');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', highlightNav);
-});
-
-let slideIndexes = [0, 0]; // Stores index for each slideshow
-let slideContainers = document.querySelectorAll(".slideshow-container");
-
-function showSlides(slideshowIndex) {
-    let slides = slideContainers[slideshowIndex].getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-    }
-    slideIndexes[slideshowIndex]++;
-    if (slideIndexes[slideshowIndex] > slides.length) {
-        slideIndexes[slideshowIndex] = 1;
-    }
-    slides[slideIndexes[slideshowIndex] - 1].classList.add("active");
-    setTimeout(() => showSlides(slideshowIndex), 3000);
-}
-
-function plusSlides(n, slideshowIndex) {
-    slideIndexes[slideshowIndex] += n - 1;
-    showSlides(slideshowIndex);
-}
-
-// Initialize both slideshows
-showSlides(0);
-showSlides(1);
-
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const floatingNavbar = document.querySelector("#floating-navbar");
-
-    menuToggle.addEventListener("click", function() {
-      floatingNavbar.classList.toggle("active");
-    });
-  });
-
-</script>
-
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
